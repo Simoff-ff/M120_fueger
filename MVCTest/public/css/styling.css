@@ -1,0 +1,136 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
+
+*{
+    margin: 0;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;  
+    grid-template-rows: 100px 4fr 100px;
+    grid-template-areas: 
+        'header header header'
+        'nav main aside'
+        'footer footer footer'
+}
+
+@media screen and (max-width: 992px){
+    body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;  
+    grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
+    grid-template-areas: 
+        'header header header'
+        'nav nav nav'
+        'main main main'
+        'aside aside aside'
+        'footer footer footer'
+    }
+}
+
+.menue {
+    color: white;
+    background-color: #6D00BF;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.menue:hover {
+    background-color: lightcoral;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+textarea{
+    margin: 10px 0px 10px 0px;
+    width: 400px;
+    height: 150px;
+}
+
+input{
+    margin: 10px 0px 10px 0px;
+    width: 300px;
+}
+
+header {
+    background-color: #240040;
+    grid-area: header;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    background-color: #1D0033;
+    grid-area: main;
+    padding: 20px;
+}
+
+footer {
+    background-color: #240040;
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+aside {
+    background-color: #490080;
+    grid-area: aside;
+    padding: 20px;
+}
+
+nav {
+    background-color: #490080;
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+td, th {
+    padding: 5px 30px 5px 30px;
+}
+
+tr:hover {
+    background-color: aqua;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+footer .fa {
+    margin: 30px;
+    font-size: 40px;
+}
+
+footer .fa:hover {
+    color: aqua;
+}
+
+section{
+    margin: 30px;
+}
+
+#img_Motor {
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-size: 30px;
+    font-family: 'Roboto';
+}
