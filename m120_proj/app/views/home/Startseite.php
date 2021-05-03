@@ -1,3 +1,8 @@
+<?php
+$vonWo = $_GET["vonWo"];
+$wohin = $_GET["wohin"];
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,13 +15,15 @@
         <main>
             <form>
                 <label for="vonWo">Von wo startest du?
-                    <input type="text" id="vonWo" name="wo">
+                    <input type="text" id="vonWo" name="vonWo">
                 </label>
                 <label for="wohin">Wo ist dein Zeil?
-                    <input id="wohin" name="hin">
+                    <input type="text" id="wohin" name="wohin">
                 </label>
+                <button type="submit"  name="speichern" value="1">Weiter</button>
             </form>
-            <button>Weiter</button>
+            <?php echo '<p>' . $vonWo . '</p>' ?>
+            <?php echo '<p>' . $wohin . '</p>' ?>
         </main>
     </body>
 </html>
