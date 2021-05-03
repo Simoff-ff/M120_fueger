@@ -1,6 +1,6 @@
 <?php
 
-$myName = "Damisiech";
+$myName = "Poop";
 require_once("../app/init.php");
 
 ?>
