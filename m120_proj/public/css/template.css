@@ -4,6 +4,7 @@ body {
     background-color: #101113;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 * {
@@ -29,6 +30,12 @@ form {
 }
 
 .eingabeFelder {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonForm {
+    display: flex;
     justify-content: center;
 }
 
@@ -42,4 +49,20 @@ input {
     border-color: #DC7373;
     border-radius: 50px;
     border: 1 solid #DC7373;
+    padding: 10px;
+    margin: 0px 100px 0px 100px;
+}
+
+button {
+    margin-top: 1rem;
+    width: 20%;
+    background-color: #DC7373;   
+    border-radius: 100px;
+    border: none;
+    padding: 10px;
+    font-size: large; 
+}
+
+button:hover {
+    background-color: #391C1C;
 }
