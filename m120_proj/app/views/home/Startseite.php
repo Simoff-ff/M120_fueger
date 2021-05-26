@@ -17,7 +17,7 @@ $wohin = $_GET["wohin"];
                 <label for="vonWo">Von wo startest du?
                     <input type="text" id="vonWo" name="vonWo">
                 </label>
-                <label for="wohin">Wo ist dein Zeil?
+                <label for="wohin">Wo ist dein Ziel?
                     <input type="text" id="wohin" name="wohin">
                 </label>
                 <button type="submit"  name="speichern" value="1">Weiter</button>
