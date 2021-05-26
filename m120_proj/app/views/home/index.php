@@ -66,7 +66,7 @@
     <meta name="theme-color" content="#563d7c" />
 
     <!-- Custom styles for this template -->
-    <link href="/MVCTest/public/css/styling.css" rel="stylesheet" />
+    <link href="../public/css/styling.css" rel="stylesheet" />
   </head>
   <body>
     <header>
