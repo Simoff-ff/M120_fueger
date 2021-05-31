@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    
+        <link href="/M120_Fueger/m120_proj/public/css/template.css" rel="stylesheet">
     </head>
     <body>
         <header>

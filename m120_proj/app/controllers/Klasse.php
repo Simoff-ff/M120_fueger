@@ -8,5 +8,9 @@
 
         }
 
+        public function test(){
+            $this->view('home/klasse');
+        }
+
 
     }
