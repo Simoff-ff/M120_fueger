@@ -1,11 +1,7 @@
 <?php
-@$vonWo = $_GET["vonWo"];
-@$wohin = $_GET["wohin"];
+@$vonWo = $_POST["vonWo"];
+@$wohin = $_POST["wohin"];
 @$speicher = $_GET["speichern"];
-
-if ($speicher == 1) {
-    $this->weiter();
-}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +20,7 @@ if ($speicher == 1) {
                         <input type="text" id="wohin" name="wohin" placeholder="Wo ist dein Ziel?">
                 </div>
                 <div class="buttonForm">
-                    <button type="submit"  name="speichern" value="1">Weiter</button>
+                    <button type="submit">Weiter</button>
                 </div>
             </form>
             <?php echo '<p>' . $vonWo . '</p>' ?>

@@ -14,11 +14,9 @@
         </header>
         <main>
             <form>
-                <button type="ersteKlasse" name="ersteKlasse" value="1">1. Klasse</button>
-                <button type="zweiteKlasse" name="zweiteKlasse" value="2">2. Klasse</button>
+                <button type="ersteKlasse" name="hinfahrt" value="hinfahrt">Hinfahrt</button>
+                <button type="zweiteKlasse" name="retour" value="retour">Mit Retour</button>
             </form>
-            <?php echo '<p>' . $vonWo . '</p>' ?>
-            <?php echo '<p>' . $wohin . '</p>' ?>
         </main>
     </body>
 </html>
