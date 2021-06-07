@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik&family=Rubik+Mono+One&display=swap');
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
 body {
     background-color: #101113;
     display: flex;
@@ -53,7 +63,23 @@ input {
     margin: 0px 100px 0px 100px;
 }
 
-button {
+.buttonPlus {
+    background-color: #DC7373;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+}
+
+.buttonMinus {
+    background-color: #DC7373;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+}
+
+.buttonSubmit {
     margin-top: 1rem;
     width: 20%;
     background-color: #DC7373;   
@@ -65,4 +91,18 @@ button {
 
 button:hover {
     background-color: #391C1C;
+}
+
+span {
+    color: #DC7373;
+}
+
+.numberEingabe {
+    display: flex;
+    flex-direction: row;
+}
+
+.plusMinus {
+    display: flex;
+    flex-direction: column;
 }

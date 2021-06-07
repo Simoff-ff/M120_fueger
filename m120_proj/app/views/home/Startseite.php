@@ -20,7 +20,7 @@
                         <input type="text" id="wohin" name="wohin" placeholder="Wo ist dein Ziel?">
                 </div>
                 <div class="buttonForm">
-                    <button type="submit">Weiter</button>
+                    <button class="buttonSubmit" type="submit">Weiter</button>
                 </div>
             </form>
             <?php echo '<p>' . $vonWo . '</p>' ?>

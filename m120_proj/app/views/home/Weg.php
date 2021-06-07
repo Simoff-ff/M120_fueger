@@ -14,8 +14,8 @@
         </header>
         <main>
             <form>
-                <button type="ersteKlasse" name="hinfahrt" value="hinfahrt">Hinfahrt</button>
-                <button type="zweiteKlasse" name="retour" value="retour">Mit Retour</button>
+                <button class="buttonSubmit" type="ersteKlasse" name="hinfahrt" value="hinfahrt">Hinfahrt</button>
+                <button class="buttonSubmit" type="zweiteKlasse" name="retour" value="retour">Mit Retour</button>
             </form>
         </main>
     </body>
