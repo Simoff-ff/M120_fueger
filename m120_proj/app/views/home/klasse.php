@@ -1,6 +1,21 @@
 <?php
 @$vonWo = $_GET["vonWo"];
 @$wohin = $_GET["wohin"];
+$edit = [];
+$db = new Database;
+
+$db->createDatabase();
+$db->createTable();
+$db->insertValues();
+
+$helper = new DBHelper;
+$request = $helper->validateRequest($_GET);
+
+$orte = new Ortschaften(
+    @$orte = $request['Ort']
+);
+
+$test = $db->all();
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +32,20 @@
                 <button type="ersteKlasse" name="ersteKlasse" value="1">1. Klasse</button>
                 <button type="zweiteKlasse" name="zweiteKlasse" value="2">2. Klasse</button>
             </form>
+            <?php echo '<p>' . $test["Ort"] . '</p>' ?>
             <?php echo '<p>' . $vonWo . '</p>' ?>
             <?php echo '<p>' . $wohin . '</p>' ?>
+            <?php
+                  // Für jeden Eintrag im Hauptarray
+                foreach ($test as $temp) {
+                    // Einzelnes Auto ist in $auto verfügbar
+                
+                    echo '
+                    <tr>
+                    <td>'.$temp["Ort"].'</td>
+                    </tr>';
+                }
+            ?>
         </main>
     </body>
 </html>
