@@ -1,7 +1,13 @@
 <?php
+
 @$vonWo = $_POST["vonWo"];
 @$wohin = $_POST["wohin"];
 @$speicher = $_GET["speichern"];
+
+$homeController = new Home;
+if($speichern == 1){
+    $homeController->weiter();
+}
 ?>
 
 <!DOCTYPE html>

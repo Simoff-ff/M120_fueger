@@ -1,10 +1,14 @@
 <?php
+<<<<<<< HEAD
 @$klasse = $_GET["ersteklasse"];
 
 
 $db = new Database;
 
 $db->updateklasse($_GET["klasse"]);
+=======
+
+>>>>>>> ed9b6d6e7878e3bed0084ccddaa816e08e32aafc
 ?>
 
 <!DOCTYPE html>
