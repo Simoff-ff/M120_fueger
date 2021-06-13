@@ -6,7 +6,9 @@ $db = new Database;
 
 $db->createDatabase();
 $db->createTable();
+$db->createTableActive();
 $db->insertValues();
+$db->insertValuesActive();
 
 $helper = new DBHelper;
 $request = $helper->validateRequest($_GET);
@@ -15,7 +17,11 @@ $orte = new Ortschaften(
     @$orte = $request['Ort']
 );
 
+<<<<<<< Updated upstream
 @$test = $db->all();
+=======
+$test = $db->allActive();
+>>>>>>> Stashed changes
 ?>
 
 <!DOCTYPE html>

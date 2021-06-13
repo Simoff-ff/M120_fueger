@@ -1,5 +1,4 @@
 <?php
-
 $myName = "Poop";
 require_once("../app/init.php");
 
