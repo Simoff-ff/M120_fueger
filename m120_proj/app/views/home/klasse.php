@@ -15,7 +15,7 @@ $orte = new Ortschaften(
     @$orte = $request['Ort']
 );
 
-$test = $db->all();
+@$test = $db->all();
 ?>
 
 <!DOCTYPE html>
@@ -29,10 +29,12 @@ $test = $db->all();
         </header>
         <main>
             <form>
-                <button type="ersteKlasse" name="ersteKlasse" value="1">1. Klasse</button>
-                <button type="zweiteKlasse" name="zweiteKlasse" value="2">2. Klasse</button>
+                <div class="eingabeFelder">
+                    <button class="buttonSubmit" type="ersteKlasse" name="ersteKlasse" value="1">1. Klasse</button>
+                    <button class="buttonSubmit" type="zweiteKlasse" name="zweiteKlasse" value="2">2. Klasse</button>
+                </div>    
             </form>
-            <?php echo '<p>' . $test["Ort"] . '</p>' ?>
+            <?php echo '<p>' . @$test["Ort"] . '</p>' ?>
             <?php echo '<p>' . $vonWo . '</p>' ?>
             <?php echo '<p>' . $wohin . '</p>' ?>
             <?php

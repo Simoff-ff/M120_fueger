@@ -1,6 +1,5 @@
 <?php
-@$vonWo = $_GET["vonWo"];
-@$wohin = $_GET["wohin"];
+
 ?>
 
 <!DOCTYPE html>
