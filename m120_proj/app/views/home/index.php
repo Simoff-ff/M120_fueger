@@ -1,7 +1,6 @@
 <?=
 'Sali '. $data['name'];
 $db = new Database;
-
 $db->createDatabase();
 $db->createTable();
 ?>

@@ -34,7 +34,21 @@ class Database
         $sql = "CREATE TABLE IF NOT EXISTS ortschaft(
             ID INTEGER NOT NULL AUTO_INCREMENT,
             Ort VARCHAR(255),
-            #Abfahrt time(),
+            PRIMARY KEY (ID));";
+        $this->conn->exec($sql); 
+    }
+
+    public function createTableActive(){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+        $sql = "CREATE TABLE IF NOT EXISTS Eingaben(
+            ID INTEGER NOT NULL AUTO_INCREMENT,
+            vonwo VARCHAR(255),
+            wohin VARCHAR(255),
+            klasse INTEGER(2),
+            weg VARCHAR(255),
+            kinder INTEGER(32),
+            erwachsene INTEGER(32),
             PRIMARY KEY (ID));";
         $this->conn->exec($sql); 
     }
@@ -43,6 +57,13 @@ class Database
         $use = "USE m120;";
         $this->conn->exec($use);
         $sql = "INSERT INTO ortschaft (Ort) VALUES ('test');";
+        $this->conn->exec($sql);
+    }
+
+    public function insertValuesActive(){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+        $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, kinder, erwachsene) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3);";
         $this->conn->exec($sql);
     }
 
@@ -70,9 +91,46 @@ class Database
         return $this->stmt->fetchAll();
     }
 
+    public function allActive()
+    {
+        $query = "SELECT * FROM eingaben ORDER BY ID DESC";
+        $this->execQuery($query);
+        return $this->stmt->fetchAll();
+    }
+
     public function one()
     {
         return $this->stmt->fetch();
     }
+
+    public function updatevowo($vonwo, $wohin){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+            $sql = "UPDATE Eingaben SET vonwo = '$vonwo', wohin= '$wohin' WHERE ID = 1;"; 
+        $this->conn->exec($sql);
+    }
+
+    public function updateklasse($klasse){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+            $sql = "UPDATE Eingaben SET klasse = '$klasse' WHERE ID = 1;"; 
+        $this->conn->exec($sql);
+    }
+
+    public function updatebillete($kinder, $erwachsene){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+            $sql = "UPDATE Eingaben SET kinder = '$kinder', erwachsene= '$erwachsene' WHERE ID = 1;"; 
+        $this->conn->exec($sql);
+    }
+
+    public function updateweg($weg) {
+        $use = "USE m120;";
+        $this->conn->exec($use);
+            $sql = "UPDATE Eingaben SET weg = '$weg' WHERE ID = 1;"; 
+        $this->conn->exec($sql);
+    }
+
+    
     
 }

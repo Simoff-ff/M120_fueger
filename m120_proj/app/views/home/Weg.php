@@ -1,6 +1,10 @@
 <?php
-@$vonWo = $_GET["vonWo"];
-@$wohin = $_GET["wohin"];
+@$klasse = $_GET["ersteklasse"];
+
+
+$db = new Database;
+
+$db->updateklasse($_GET["klasse"]);
 ?>
 
 <!DOCTYPE html>

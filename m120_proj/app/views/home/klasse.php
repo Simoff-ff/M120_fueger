@@ -6,7 +6,14 @@ $db = new Database;
 
 $db->createDatabase();
 $db->createTable();
-$db->insertValues();
+$db->createTableActive();
+//$db->insertValues();
+//$db->insertValuesActive();
+
+$eingabe = new Eingaben("ein", "swei");
+$eingabe->getVonwo();
+$eingabe->setVonwo("dreis");
+$db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
 
 $helper = new DBHelper;
 $request = $helper->validateRequest($_GET);
@@ -15,7 +22,7 @@ $orte = new Ortschaften(
     @$orte = $request['Ort']
 );
 
-$test = $db->all();
+$test = $db->allActive();
 ?>
 
 <!DOCTYPE html>
@@ -29,11 +36,10 @@ $test = $db->all();
         </header>
         <main>
             <form>
-                <button type="ersteKlasse" name="ersteKlasse" value="1">1. Klasse</button>
-                <button type="zweiteKlasse" name="zweiteKlasse" value="2">2. Klasse</button>
+                <button type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
+                <button type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
             </form>
-            <?php echo '<p>' . $test["Ort"] . '</p>' ?>
-            <?php echo '<p>' . $vonWo . '</p>' ?>
+            <?php echo '<p>' . $eingabe->getVonwo() . '</p>' ?>
             <?php echo '<p>' . $wohin . '</p>' ?>
             <?php
                   // Für jeden Eintrag im Hauptarray
@@ -42,7 +48,7 @@ $test = $db->all();
                 
                     echo '
                     <tr>
-                    <td>'.$temp["Ort"].'</td>
+                    <td>'.$temp["wohin"].'</td>
                     </tr>';
                 }
             ?>
