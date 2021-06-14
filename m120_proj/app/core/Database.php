@@ -53,21 +53,6 @@ class Database
         $this->conn->exec($sql); 
     }
 
-    public function createTableActive(){
-        $use = "USE m120;";
-        $this->conn->exec($use);
-        $sql = "CREATE TABLE IF NOT EXISTS Eingaben(
-            ID INTEGER NOT NULL AUTO_INCREMENT,
-            vonwo VARCHAR(255),
-            wohin VARCHAR(255),
-            klasse INTEGER(),
-            weg VARCHAR(255),
-            anzahlbilletekinder INTEGER(),
-            anzahlbilleteerwachsene INTEGER(),
-            PRIMARY KEY (ID));";
-        $this->conn->exec($sql); 
-    }
-
     public function insertValues(){
         $use = "USE m120;";
         $this->conn->exec($use);
@@ -78,11 +63,7 @@ class Database
     public function insertValuesActive(){
         $use = "USE m120;";
         $this->conn->exec($use);
-<<<<<<< HEAD
         $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, kinder, erwachsene) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3);";
-=======
-        $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, anzahlbilletekinder, anzahlbilleteerwachsene) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3);";
->>>>>>> ed9b6d6e7878e3bed0084ccddaa816e08e32aafc
         $this->conn->exec($sql);
     }
 
@@ -112,11 +93,7 @@ class Database
 
     public function allActive()
     {
-<<<<<<< HEAD
         $query = "SELECT * FROM eingaben ORDER BY ID DESC";
-=======
-        $query = "SELECT * FROM Eingaben ORDER BY ID DESC";
->>>>>>> ed9b6d6e7878e3bed0084ccddaa816e08e32aafc
         $this->execQuery($query);
         return $this->stmt->fetchAll();
     }
