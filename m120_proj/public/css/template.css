@@ -87,6 +87,7 @@ input {
     border: none;
     padding: 10px;
     font-size: large; 
+    margin-left: 30px;
 }
 
 button:hover {
@@ -111,4 +112,11 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 50px;
+}
+
+.dunkelMitBorder {
+    background-color: hsl(240, 9%, 4%);
+    border-radius: 50px;
+    padding: 50px;
 }

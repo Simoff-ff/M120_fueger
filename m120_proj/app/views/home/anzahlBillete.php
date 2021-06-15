@@ -1,6 +1,12 @@
 <?php
-@$vonWo = $_GET["vonWo"];
-@$wohin = $_GET["wohin"];
+
+$db = new Database;
+
+$db->createDatabase();
+$db->createTable();
+$db->createTableActive();
+
+$db->updateweg($_GET["weg"]);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +40,9 @@
                     </div>
                     </label>
                     </div>
-                <button class="buttonSubmit" type="submit"  name="speichern" value="1">Weiter</button>
+                    <div class="buttonForm">
+                        <button class="buttonSubmit" type="submit" formaction="../Gueltigkeit/test">Weiter</button>
+                    </div>
             </form>
            
             <?php echo '<p>' . $vonWo . '</p>' ?>

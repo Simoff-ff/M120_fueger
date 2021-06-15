@@ -55,6 +55,34 @@ class Database
             erwachsene INTEGER(32),
             PRIMARY KEY (ID));";
         $this->conn->exec($sql);
+        $this->conn->exec($sql); 
+    }
+
+    /*public function createTableActive(){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+        $sql = "CREATE TABLE IF NOT EXISTS Eingaben(
+            ID INTEGER NOT NULL AUTO_INCREMENT,
+            vonwo VARCHAR(255),
+            wohin VARCHAR(255),
+            klasse INTEGER(),
+            weg VARCHAR(255),
+            anzahlbilletekinder INTEGER(),
+            anzahlbilleteerwachsene INTEGER(),
+            PRIMARY KEY (ID));";
+        $this->conn->exec($sql); 
+    }*/
+
+    public function insertValues(){
+        $use = "USE m120;";
+        $this->conn->exec($use);
+        $sql = "INSERT INTO ortschaft (Ort) VALUES ('test');";
+        $this->conn->exec($sql);
+    }
+
+    public function insertValuesActive(){
+        $use = "USE m120;";
+        $this->conn->exec($use);
         $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, kinder, erwachsene) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3);";
         $this->conn->exec($sql);
     }

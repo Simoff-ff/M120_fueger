@@ -18,8 +18,10 @@ $db->updateklasse($_GET["klasse"]);
         </header>
         <main>
             <form>
-                <button class="buttonSubmit" type="ersteKlasse" name="hinfahrt" value="hinfahrt">Hinfahrt</button>
-                <button class="buttonSubmit" type="zweiteKlasse" name="retour" value="retour">Mit Retour</button>
+                <div class="buttonForm">
+                    <button class="buttonSubmit" type="ersteKlasse" name="weg" value="Hinfahrt" formaction="../AnzahlBillete/test">Hinfahrt</button>
+                    <button class="buttonSubmit" type="zweiteKlasse" name="weg" value="Retour" formaction="../AnzahlBillete/test">Mit Retour</button>
+                </div>
             </form>
         </main>
     </body>

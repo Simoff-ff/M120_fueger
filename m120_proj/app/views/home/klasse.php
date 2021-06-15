@@ -8,7 +8,6 @@ $db->createDatabase();
 $db->createTable();
 $db->createTableActive();
 
-
 $db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
 
 $helper = new DBHelper;
@@ -22,7 +21,6 @@ $orte = new Ortschaften(
 $test = $db->allActive();
 @$test = $db->all();
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,8 +32,8 @@ $test = $db->allActive();
         </header>
         <main>
             <form>
-                <button type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
-                <button type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
+                <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
+                <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
             </form>
             <?php echo '<p>' . $eingabe->getVonwo() . '</p>' ?>
             <?php echo '<p>' . $wohin . '</p>' ?>
