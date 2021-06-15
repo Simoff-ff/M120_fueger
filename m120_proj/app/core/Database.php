@@ -34,8 +34,12 @@ class Database
         $sql = "CREATE TABLE IF NOT EXISTS ortschaft(
             ID INTEGER NOT NULL AUTO_INCREMENT,
             Ort VARCHAR(255),
+            Preis FLOAT(3, 2),
             PRIMARY KEY (ID));";
-        $this->conn->exec($sql); 
+        $this->conn->exec($sql);
+        $sql = "INSERT INTO ortschaft (Ort, Preis) VALUES ('Frauenfeld', 20.00);";
+        $this->conn->exec($sql);
+        
     }
 
     public function createTableActive(){
@@ -50,19 +54,7 @@ class Database
             kinder INTEGER(32),
             erwachsene INTEGER(32),
             PRIMARY KEY (ID));";
-        $this->conn->exec($sql); 
-    }
-
-    public function insertValues(){
-        $use = "USE m120;";
-        $this->conn->exec($use);
-        $sql = "INSERT INTO ortschaft (Ort) VALUES ('test');";
         $this->conn->exec($sql);
-    }
-
-    public function insertValuesActive(){
-        $use = "USE m120;";
-        $this->conn->exec($use);
         $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, kinder, erwachsene) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3);";
         $this->conn->exec($sql);
     }

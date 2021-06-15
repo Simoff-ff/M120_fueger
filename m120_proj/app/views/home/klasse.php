@@ -7,12 +7,8 @@ $db = new Database;
 $db->createDatabase();
 $db->createTable();
 $db->createTableActive();
-//$db->insertValues();
-//$db->insertValuesActive();
 
-$eingabe = new Eingaben("ein", "swei");
-$eingabe->getVonwo();
-$eingabe->setVonwo("dreis");
+
 $db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
 
 $helper = new DBHelper;
