@@ -3,24 +3,12 @@
 $edit = [];
 $db = new Database;
 
-$db->createDatabase();
-$db->createTable();
-$db->createTableActive();
-
 $db->updategueltigkeit($_GET["gueltigkeit"]);
 
-$helper = new DBHelper;
-$request = $helper->validateRequest($_GET);
-
-$orte = new Ortschaften(
-    @$orte = $request['Ort']
-);
-
 $ortschaften = $db->all();
+$eingaben = $db->allActive();
 
-$test = $db->allActive();
-
-foreach ($test AS $eingabe){
+foreach ($eingaben AS $eingabe){
     $vonwo = $eingabe['vonwo'];
     $wohin = $eingabe['wohin'];
     $klasse = $eingabe['klasse'];
@@ -71,17 +59,31 @@ $result = ($resulterwachsene + $resultkind) * $faktorhinfahrt;
         <main>
            <div class="dunkelMitBorder">
                 <?php 
-                    foreach($test AS $value) {
-                        
-                        echo '<br> Von: ' . $value['vonwo'];
-                        echo '<br> Bis: ' . $value['wohin'];
-                        echo '<br> Klasse: ' . $value['klasse'];
-                        echo '<br> Hinfahrt oder Retour: ' . $value['weg'];
-                        echo '<br> Anzahl Kinder Billete: ' . $value['kinder'];
-                        echo '<br> Anzahl Erwachsene Billete: ' . $value['erwachsene'];
-                        echo '<br> Gültig bis: ' . $value['gueltigkeit'];
-                        echo '<br> ';
-                        echo '<br> Gesamtpreis: ' . $result;
+                    foreach($eingaben AS $value) {
+                        echo "<table style='width:100%'>
+                                <tr>
+                                    <th>Von: </th>
+                                    <th>Bis: </th>
+                                    <th>Klasse: </th>
+                                    <th>Hinfahrt oder Retour: </th>
+                                    <th>Anzahl Kinder Billete: </th>
+                                    <th>Anzahl Erwachsene Billete:  </th>
+                                    <th>Gültig bis:  </th>
+                                    <th></th>
+                                    <th>Gesamtpreis: </th>
+                                </tr>
+                                <tr>
+                                    <td>" . $value['vonwo'] . "</td>
+                                    <td>" . $value['wohin'] . "</td>
+                                    <td>" . $value['klasse'] . "</td>
+                                    <td>" . $value['weg'] . "</td>
+                                    <td>" . $value['kinder'] . "</td>
+                                    <td>" . $value['erwachsene'] . "</td>
+                                    <td>" . $value['gueltigkeit'] . "</td>
+                                    <td></td>
+                                    <td>" . $result . "</td>
+                                </tr>
+                            </table>";
                      }
                 ?>
                 <div class="buttonForm">

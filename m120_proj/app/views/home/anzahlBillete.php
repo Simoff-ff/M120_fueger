@@ -2,10 +2,6 @@
 
 $db = new Database;
 
-$db->createDatabase();
-$db->createTable();
-$db->createTableActive();
-
 $db->updateweg($_GET["weg"]);
 ?>
 

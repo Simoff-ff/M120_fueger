@@ -1,25 +1,11 @@
 <?php
 @$vonWo = $_GET["vonWo"];
 @$wohin = $_GET["wohin"];
-$edit = [];
-$db = new Database;
 
-$db->createDatabase();
-//$db->createTable();
-//$db->createTableActive();
+$db = new Database;
 
 $db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
 
-$helper = new DBHelper;
-$request = $helper->validateRequest($_GET);
-
-$orte = new Ortschaften(
-    @$orte = $request['Ort']
-);
-
-
-$test = $db->allActive();
-//@$test = $db->all();
 ?>
 <!DOCTYPE html>
 <html>

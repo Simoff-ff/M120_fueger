@@ -1,21 +1,6 @@
 <?php
-$edit = [];
 $db = new Database;
-
-$db->createDatabase();
-$db->createTable();
-$db->createTableActive();
-//$db->insertValues();
-//$db->insertValuesActive();
-
 $db->updatebillete($_GET["kinderBillete"], $_GET["erwachseneBillete"]);
-
-$helper = new DBHelper;
-$request = $helper->validateRequest($_GET);
-
-$orte = new Ortschaften(
-    @$orte = $request['Ort']
-);
 
 ?>
 <!DOCTYPE html>
