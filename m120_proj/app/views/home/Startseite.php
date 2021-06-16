@@ -28,6 +28,9 @@ if($speichern == 1){
                 <div class="buttonForm">
                     <button class="buttonSubmit" type="submit" formaction="Klasse/test">Weiter</button>
                 </div>
+                <div>
+                    <h2>Auswahlmöglichkeiten: Frauenfeld, Zuerich, St.Gallen</h2>
+                </div>
             </form>
             <?php echo '<p>' . $vonWo . '</p>' ?>
             <?php echo '<p>' . $wohin . '</p>' ?>
