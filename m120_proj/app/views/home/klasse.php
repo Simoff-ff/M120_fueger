@@ -1,25 +1,11 @@
 <?php
 @$vonWo = $_GET["vonWo"];
 @$wohin = $_GET["wohin"];
-$edit = [];
-$db = new Database;
 
-$db->createDatabase();
-//$db->createTable();
-//$db->createTableActive();
+$db = new Database;
 
 $db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
 
-$helper = new DBHelper;
-$request = $helper->validateRequest($_GET);
-
-$orte = new Ortschaften(
-    @$orte = $request['Ort']
-);
-
-
-$test = $db->allActive();
-//@$test = $db->all();
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,8 +18,10 @@ $test = $db->allActive();
         </header>
         <main>
             <form>
-                <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
-                <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
+                <div class="buttonForm">
+                    <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
+                    <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
+                </div>
             </form>
         </main>
     </body>

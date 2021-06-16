@@ -1,7 +1,4 @@
 <?php
-@$klasse = $_GET["ersteklasse"];
-
-
 $db = new Database;
 
 $db->updateklasse($_GET["klasse"]);

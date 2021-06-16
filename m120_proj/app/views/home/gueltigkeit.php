@@ -1,21 +1,6 @@
 <?php
-$edit = [];
 $db = new Database;
-
-$db->createDatabase();
-$db->createTable();
-$db->createTableActive();
-//$db->insertValues();
-//$db->insertValuesActive();
-
 $db->updatebillete($_GET["kinderBillete"], $_GET["erwachseneBillete"]);
-
-$helper = new DBHelper;
-$request = $helper->validateRequest($_GET);
-
-$orte = new Ortschaften(
-    @$orte = $request['Ort']
-);
 
 ?>
 <!DOCTYPE html>
@@ -30,7 +15,7 @@ $orte = new Ortschaften(
         <main>
             <form>
                 <div class="eingabeFelder">
-                    <input type="date" name="gueltigkeit">
+                    <input type="date" name="gueltigkeit" required>
                 </div>
                 <div class="buttonForm">
                     <button class="buttonSubmit" type="submit" formaction="../Gesammtuebersicht/test">Weiter</button>
