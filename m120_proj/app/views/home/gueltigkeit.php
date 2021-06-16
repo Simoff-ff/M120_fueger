@@ -8,7 +8,7 @@ $db->createTableActive();
 //$db->insertValues();
 //$db->insertValuesActive();
 
-$db->updatebillete($_GET["kinderBillete"], $_GET["kinderBillete"]);
+$db->updatebillete($_GET["kinderBillete"], $_GET["erwachseneBillete"]);
 
 $helper = new DBHelper;
 $request = $helper->validateRequest($_GET);

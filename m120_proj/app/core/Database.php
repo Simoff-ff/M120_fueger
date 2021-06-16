@@ -158,6 +158,14 @@ class Database
         $this->conn->exec($sql);
     }
 
+    public function getPreis($ort) {
+        $query = "SELECT Preis from ortschaft WHERE Ort = '$ort';"; 
+        $this->execQuery($query);
+        return $this->stmt->fetch();
+    }
+
+
+
     
     
 }

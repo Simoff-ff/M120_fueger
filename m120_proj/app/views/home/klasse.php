@@ -35,17 +35,6 @@ $test = $db->allActive();
                 <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
                 <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
             </form>
-            <?php echo '<p>' . $wohin . '</p>' ?>
-            <?php
-                  // Für jeden Eintrag im Hauptarray
-                foreach ($test as $temp) {
-                
-                    echo '
-                    <tr>
-                    <td>'.$temp["wohin"].'</td>
-                    </tr>';
-                }
-            ?>
         </main>
     </body>
 </html>
