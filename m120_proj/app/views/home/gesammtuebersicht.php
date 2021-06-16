@@ -58,34 +58,46 @@ $result = ($resulterwachsene + $resultkind) * $faktorhinfahrt;
         </header>
         <main>
            <div class="dunkelMitBorder">
+                <div class="tableRow">
                 <?php 
                     foreach($eingaben AS $value) {
-                        echo "<table style='width:100%'>
+                        echo "<table>
                                 <tr>
                                     <th>Von: </th>
-                                    <th>Bis: </th>
-                                    <th>Klasse: </th>
-                                    <th>Hinfahrt oder Retour: </th>
-                                    <th>Anzahl Kinder Billete: </th>
-                                    <th>Anzahl Erwachsene Billete:  </th>
-                                    <th>Gültig bis:  </th>
-                                    <th></th>
-                                    <th>Gesamtpreis: </th>
+                                    <td>" . $value['vonwo'] . "</td>
                                 </tr>
                                 <tr>
-                                    <td>" . $value['vonwo'] . "</td>
+                                    <th>Bis: </th>
                                     <td>" . $value['wohin'] . "</td>
+                                </tr>
+                                <tr>
+                                    <th>Klasse: </th>
                                     <td>" . $value['klasse'] . "</td>
+                                </tr>
+                                <tr>
+                                    <th>Hinfahrt oder Retour: </th>
                                     <td>" . $value['weg'] . "</td>
+                                </tr>
+                                <tr>
+                                    <th>Anzahl Kinder Billete: </th>
                                     <td>" . $value['kinder'] . "</td>
+                                </tr>
+                                <tr>
+                                    <th>Anzahl Erwachsene Billete:  </th>
                                     <td>" . $value['erwachsene'] . "</td>
+                                </tr>
+                                <tr>
+                                    <th>Gültig bis:  </th>
                                     <td>" . $value['gueltigkeit'] . "</td>
-                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Gesamtpreis: </th>
                                     <td>" . $result . "</td>
                                 </tr>
                             </table>";
                      }
                 ?>
+                </div>
                 <div class="buttonForm">
                     <button class="buttonSubmit">Kaufen</button>
                     <button class="buttonSubmit"><a href="../../public/">Neues Billet</a></button>

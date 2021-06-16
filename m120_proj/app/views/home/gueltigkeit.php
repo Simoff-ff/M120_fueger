@@ -15,7 +15,7 @@ $db->updatebillete($_GET["kinderBillete"], $_GET["erwachseneBillete"]);
         <main>
             <form>
                 <div class="eingabeFelder">
-                    <input type="date" name="gueltigkeit">
+                    <input type="date" name="gueltigkeit" required>
                 </div>
                 <div class="buttonForm">
                     <button class="buttonSubmit" type="submit" formaction="../Gesammtuebersicht/test">Weiter</button>

@@ -18,8 +18,10 @@ $db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
         </header>
         <main>
             <form>
-                <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
-                <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
+                <div class="buttonForm">
+                    <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
+                    <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
+                </div>
             </form>
         </main>
     </body>

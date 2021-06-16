@@ -20,20 +20,20 @@ $db->updateweg($_GET["weg"]);
                     <div class="firstSelection">
                         <label for="erwachseneBillete">Anzahl <span>Erwachsene</span> Billete </label>
                         <div class="numberEingabe">
-                            <input type="number" id="erwachseneBillete" name="erwachseneBillete">
+                            <input type="number" id="erwachseneBillete" value="1" name="erwachseneBillete" required>
                             <div class="plusMinus">
-                                <button type="button" onclick="minusEr()" class="buttonMinus">-</button>
                                 <button type="button" onclick="plusEr()" class="buttonPlus">+</button>
+                                <button type="button" onclick="minusEr()" class="buttonMinus">-</button>
                             </div>
                         </div>
                     </div>
                     <div class="firstSelection">
                         <label for="kinderBillete">Anzahl <span>Kinder/Halbtax</span> Billete</label>
                         <div class="numberEingabe">
-                            <input type="number" id="kinderBillete" name="kinderBillete">
+                            <input type="number" id="kinderBillete" value="0" name="kinderBillete" required>
                             <div class="plusMinus">
-                                <button type="button" onclick="minus()" class="buttonMinus">-</button>
                                 <button type="button" onclick="plus()" class="buttonPlus">+</button>
+                                <button type="button" onclick="minus()" class="buttonMinus">-</button>
                             </div>
                         </div>
                     </div>
