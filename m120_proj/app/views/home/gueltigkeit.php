@@ -8,8 +8,7 @@ $db->createTableActive();
 //$db->insertValues();
 //$db->insertValuesActive();
 
-$eingabe = new Eingaben("ein", "swei");
-$db->updateweg($_GET["weg"]);
+$db->updatebillete($_GET["kinderBillete"], $_GET["kinderBillete"]);
 
 $helper = new DBHelper;
 $request = $helper->validateRequest($_GET);

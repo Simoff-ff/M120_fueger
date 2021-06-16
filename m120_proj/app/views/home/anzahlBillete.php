@@ -45,8 +45,6 @@ $db->updateweg($_GET["weg"]);
                     </div>
             </form>
            
-            <?php echo '<p>' . $vonWo . '</p>' ?>
-            <?php echo '<p>' . $wohin . '</p>' ?>
         </main>
         <script>
             function plusEr(){

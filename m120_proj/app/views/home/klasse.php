@@ -5,8 +5,8 @@ $edit = [];
 $db = new Database;
 
 $db->createDatabase();
-$db->createTable();
-$db->createTableActive();
+//$db->createTable();
+//$db->createTableActive();
 
 $db->updatevowo($_GET["vonWo"], $_GET["wohin"]);
 
@@ -19,7 +19,7 @@ $orte = new Ortschaften(
 
 
 $test = $db->allActive();
-@$test = $db->all();
+//@$test = $db->all();
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +35,6 @@ $test = $db->allActive();
                 <button class="buttonSubmit" type="submit" name="klasse" value="1" formaction="../Weg/test">1. Klasse</button>
                 <button class="buttonSubmit" type="submit" name="klasse" value="2" formaction="../Weg/test">2. Klasse</button>
             </form>
-            <?php echo '<p>' . $eingabe->getVonwo() . '</p>' ?>
             <?php echo '<p>' . $wohin . '</p>' ?>
             <?php
                   // Für jeden Eintrag im Hauptarray
