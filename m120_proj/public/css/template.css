@@ -178,8 +178,12 @@ label {
 th {
     text-align: left;
     padding: 2px;
+    font-family: 'Staatliches';
+    letter-spacing: 1px;
 }
 
 td {
+    font-family: 'Staatliches';
+    letter-spacing: 0.5px;
     text-align: right;
 }

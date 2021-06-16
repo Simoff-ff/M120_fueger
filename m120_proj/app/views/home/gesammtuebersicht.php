@@ -91,8 +91,8 @@ $result = ($resulterwachsene + $resultkind) * $faktorhinfahrt;
                                     <td>" . $value['gueltigkeit'] . "</td>
                                 </tr>
                                 <tr>
-                                    <th>Gesamtpreis: </th>
-                                    <td>" . $result . "</td>
+                                    <th><span>Gesamtpreis: </span></th>
+                                    <td><span>" . $result . "</span></td>
                                 </tr>
                             </table>";
                      }
