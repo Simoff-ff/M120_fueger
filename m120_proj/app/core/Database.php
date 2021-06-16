@@ -83,7 +83,7 @@ class Database
     public function insertValuesActive(){
         $use = "USE m120;";
         $this->conn->exec($use);
-        $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, kinder, erwachsene) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3);";
+        $sql = "INSERT INTO Eingaben (vonwo, wohin, klasse, weg, kinder, erwachsene, gueltigkeit) VALUES ('vonwo', 'wohin', 1, 'weg', 2, 3, 'heute');";
         $this->conn->exec($sql);
     }
 
