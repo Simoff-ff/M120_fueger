@@ -53,6 +53,7 @@ class Database
             weg VARCHAR(255),
             kinder INTEGER(32),
             erwachsene INTEGER(32),
+            gueltigkeit VARCHAR(255),
             PRIMARY KEY (ID));";
         $this->conn->exec($sql);
     }
