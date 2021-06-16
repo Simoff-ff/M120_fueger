@@ -21,24 +21,26 @@ $db->updateweg($_GET["weg"]);
         <main>
             <form>
                 <div class="row">
-                <label for="erwachseneBillete">Anzahl <span>Erwachsene</span> Billete
-                    <div class="numberEingabe">
-                        <input type="number" id="erwachseneBillete" name="erwachseneBillete">
-                        <div class="plusMinus">
-                            <button type="button" onclick="minusEr()" class="buttonMinus">-</button>
-                            <button type="button" onclick="plusEr()" class="buttonPlus">+</button>
+                    <div class="firstSelection">
+                        <label for="erwachseneBillete">Anzahl <span>Erwachsene</span> Billete </label>
+                        <div class="numberEingabe">
+                            <input type="number" id="erwachseneBillete" name="erwachseneBillete">
+                            <div class="plusMinus">
+                                <button type="button" onclick="minusEr()" class="buttonMinus">-</button>
+                                <button type="button" onclick="plusEr()" class="buttonPlus">+</button>
+                            </div>
                         </div>
                     </div>
-                </label>
-                    <label for="kinderBillete">Anzahl <span>Kinder/Halbtax</span> Billete
-                    <div class="numberEingabe">
-                        <input type="number" id="kinderBillete" name="kinderBillete">
-                        <div class="plusMinus">
-                            <button type="button" onclick="minus()" class="buttonMinus">-</button>
-                            <button type="button" onclick="plus()" class="buttonPlus">+</button>
+                    <div class="firstSelection">
+                        <label for="kinderBillete">Anzahl <span>Kinder/Halbtax</span> Billete</label>
+                        <div class="numberEingabe">
+                            <input type="number" id="kinderBillete" name="kinderBillete">
+                            <div class="plusMinus">
+                                <button type="button" onclick="minus()" class="buttonMinus">-</button>
+                                <button type="button" onclick="plus()" class="buttonPlus">+</button>
+                            </div>
                         </div>
                     </div>
-                    </label>
                     </div>
                     <div class="buttonForm">
                         <button class="buttonSubmit" type="submit" formaction="../Gueltigkeit/test">Weiter</button>

@@ -1,13 +1,5 @@
 <?php
 
-@$vonWo = $_POST["vonWo"];
-@$wohin = $_POST["wohin"];
-@$speicher = $_GET["speichern"];
-
-$homeController = new Home;
-if($speichern == 1){
-    $homeController->weiter();
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,19 +13,28 @@ if($speichern == 1){
         </header>
         <main>
             <form>
-                <div class="eingabeFelder">
-                        <input type="text" id="vonWo" name="vonWo"  placeholder="Von wo startest du?">
-                        <input type="text" id="wohin" name="wohin" placeholder="Wo ist dein Ziel?">
+                <div class="selections">
+                    <div class="firstSelection">
+                        <label for="vonWo">Von möchtest du <span>starten </span>?</label>
+                        <select name="vonWo" id="vonWo">
+                            <option value="Frauenfeld">Frauenfeld</option>
+                            <option value="Zuerich">Zuerich</option>
+                            <option value="St.Gallen">St.Gallen</option>
+                        </select>
+                    </div>
+                    <div class="firstSelection">
+                        <label for="vonWo">Wo ist dein <span> Ziel </span> ?</label>
+                        <select name="wohin" id="wohin">
+                            <option value="Frauenfeld">Frauenfeld</option>
+                            <option value="Zuerich">Zuerich</option>
+                            <option value="St.Gallen">St.Gallen</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="buttonForm">
                     <button class="buttonSubmit" type="submit" formaction="Klasse/test">Weiter</button>
                 </div>
-                <div>
-                    <h2>Auswahlmöglichkeiten: Frauenfeld, Zuerich, St.Gallen</h2>
-                </div>
             </form>
-            <?php echo '<p>' . $vonWo . '</p>' ?>
-            <?php echo '<p>' . $wohin . '</p>' ?>
         </main>
     </body>
 </html>
