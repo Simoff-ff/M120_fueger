@@ -34,11 +34,11 @@ class Database
         $sql = "CREATE TABLE IF NOT EXISTS ortschaft(
             ID INTEGER NOT NULL AUTO_INCREMENT,
             Ort VARCHAR(255),
-            Preis FLOAT(3, 2),
+            Preis Int(255),
             PRIMARY KEY (ID));";
         $this->conn->exec($sql);
-        $sql = "INSERT INTO ortschaft (Ort, Preis) VALUES ('Frauenfeld', 20.00);";
-        $this->conn->exec($sql);
+        //$sql = "INSERT INTO ortschaft (Ort, Preis) VALUES ('Frauenfeld', 20.00);";
+        //$this->conn->exec($sql);
         
     }
 
@@ -55,7 +55,6 @@ class Database
             erwachsene INTEGER(32),
             PRIMARY KEY (ID));";
         $this->conn->exec($sql);
-        $this->conn->exec($sql); 
     }
 
     /*public function createTableActive(){
@@ -148,6 +147,13 @@ class Database
         $use = "USE m120;";
         $this->conn->exec($use);
             $sql = "UPDATE Eingaben SET weg = '$weg' WHERE ID = 1;"; 
+        $this->conn->exec($sql);
+    }
+
+    public function updategueltigkeit($gueltigkeit) {
+        $use = "USE m120;";
+        $this->conn->exec($use);
+            $sql = "UPDATE Eingaben SET gueltigkeit = '$gueltigkeit' WHERE ID = 1;"; 
         $this->conn->exec($sql);
     }
 

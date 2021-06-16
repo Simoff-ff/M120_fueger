@@ -6,13 +6,8 @@ $db = new Database;
 $db->createDatabase();
 $db->createTable();
 $db->createTableActive();
-//$db->insertValues();
-//$db->insertValuesActive();
 
-$eingabe = new Eingaben("ein", "swei");
-$eingabe->getVonwo();
-$eingabe->setVonwo("dreis");
-//$db->updatevowo($_GET["gueltigkeit"], $_GET["wohin"]);
+$db->updategueltigkeit($_GET["gueltigkeit"]);
 
 $helper = new DBHelper;
 $request = $helper->validateRequest($_GET);
@@ -38,17 +33,18 @@ $test = $db->allActive();
            <div class="dunkelMitBorder">
                 <?php 
                     foreach($test AS $value) {
-                        echo '<br> Wohin: ' . $value['wohin'];
-                        echo '<br> Von Wo: ' . $value['vonwo'];
-                        echo '<br> Klase: ' . $value['klasse'];
-                        echo '<br> Weg: ' . $value['weg'];
+                        echo '<br> Von: ' . $value['vonwo'];
+                        echo '<br> Bis: ' . $value['wohin'];
+                        echo '<br> Klasse: ' . $value['klasse'];
+                        echo '<br> Hinfahrt oder Retour: ' . $value['weg'];
                         echo '<br> Anzahl Kinder Billete: ' . $value['kinder'];
                         echo '<br> Anzahl Erwachsene Billete: ' . $value['erwachsene'];
+                        echo '<br> Gültig bis: ' . $value['gueltigkeit'];
                      }
                 ?>
                 <div class="buttonForm">
                     <button class="buttonSubmit">Kaufen</button>
-                    <button class="buttonSubmit"><a href="../../public/">Neus Billet</a></button>
+                    <button class="buttonSubmit"><a href="../../public/">Neues Billet</a></button>
                 </div>
            </div>
         </main>
